@@ -31,20 +31,27 @@ Dependencies:
 - wg-quick (wireguard-tools)
 - openresolv (for dns)
 
-To install them on Arch:
+To install them use the matching command for your system:
+
 ```
-sudo pacman -S --needed jq curl wireguard-tools openresolv
+sudo pacman -S --needed jq curl wireguard-tools openresolv  # on a Arch base
+sudo apt install jq curl wireguard-tools openresolv  # on a Debian base
+sudo dnf install jq curl wireguard-tools openresolv  # on a Fedora base
+sudo dnf install epel-release && sudo dnf install jq curl wireguard-tools openresolv  # on a RedHat base
+sudo zypper install jq curl wireguard-tools openresolv  # on a openSUSE base
 ```
 
 Manual installation:
 ```
 git clone https://github.com/marvin1099/wgnord
 cd wgnord
-install -Dm644 template.conf /var/lib/wgnord/template.conf
-install -Dm644 countries.txt /var/lib/wgnord/countries.txt
-install -Dm644 countries_iso31662.txt /var/lib/wgnord/countries_iso31662.txt
+sudo install -Dm644 template.conf /var/lib/wgnord/template.conf
+sudo install -Dm644 countries.txt /var/lib/wgnord/countries.txt
+sudo install -Dm644 countries_iso31662.txt /var/lib/wgnord/countries_iso31662.txt
 sudo install -Dm755 wgnord /usr/bin/wgnord
 ```
+
+Note: if you don't have `sudo`, you can use `su -` and enter the root password to become root, then run the commands without `sudo`.
 
 `wgnord` can also be installed through the AUR like so:
 ```
