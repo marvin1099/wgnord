@@ -2,7 +2,7 @@
 This script lets you connect to NordVPN servers through WireGuard using their "NordLynx" protocol.
 
 ```
-Usage: wgnord [ l(ogin) | c(onnect) | d(isconnect) | a(ccount) ]
+Usage: wgnord [ l(ogin) | c(onnect) | d(isconnect) | a(ccount) | s(status) ]
 
 login:
     wgnord l "your_token"
@@ -18,6 +18,9 @@ disconnect:
 account:
     wgnord a
     Prints information about the currently logged in account
+status:
+    wgnord s
+    Prints current VPN connection status
 
 wgnord's files are in /var/lib/wgnord, edit template.conf to change Wireguard options
 ```
