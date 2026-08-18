@@ -38,7 +38,7 @@ sudo pacman -S --needed jq curl wireguard-tools openresolv
 
 Manual installation:
 ```
-git clone https://github.com/phirecc/wgnord
+git clone https://github.com/marvin1099/wgnord
 cd wgnord
 install -Dm644 template.conf /var/lib/wgnord/template.conf
 install -Dm644 countries.txt /var/lib/wgnord/countries.txt
