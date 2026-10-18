@@ -12,6 +12,7 @@ connect:
     -f            Refresh cached longitude/latitude
     -n            Don't connect
     -q            Don't wait up to 2 seconds for the connection to come up
+    -s            Shuffle recommendations list before connecting
     -o out.conf   Write config to different file
 disconnect:
     wgnord d
